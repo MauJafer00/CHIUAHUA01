@@ -66,7 +66,7 @@ function draw() {
     if(obstaclesGroup.isTouching(chihuahua)){
       gameState=END;
      //console.log("chiuhua choco y se lastimo");
-      
+      score=0;
      }
      spawnObstacles();
   }
