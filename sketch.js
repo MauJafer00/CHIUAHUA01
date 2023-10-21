@@ -43,30 +43,42 @@ function setup() {
 }
   
 function draw() {
-  console.log(frameCount);
+  // console.log(frameCount);
   background("#80d2e0");
+  if (gameState==PLAY){
+
+    ground.velocityX = -2;
+
+    if (ground.x < 0) {
+    
+      ground.x = ground.width / 2;
   
-  ground.velocityX = -2;
-  console.log(ground.width);
-  if (ground.x < 0) {
+    }
+    if (keyDown("space")) {
     
-    ground.x = ground.width / 2;
+      chihuahua.velocityY = -10;
+  
+    }
+    chihuahua.velocityY = chihuahua.velocityY + 0.5;
+    if(obstaclesGroup.isTouching(chihuahua)){
+      gameState=END;
+     console.log("chiuhua choco y se lastimo");
+      
+     }
+     spawnObstacles();
+  }
+  else if(gameState==END){
+
+    ground.velocityX = 0;
 
   }
-  if (keyDown("space")) {
-    
-    chihuahua.velocityY = -10;
-
-  }
-  chihuahua.velocityY = chihuahua.velocityY + 0.5;
+ //  console.log(ground.width);
+  
+ 
   chihuahua.collide(invisibleGround);
-  if(obstaclesGroup.isTouching(chihuahua)){
-   gameState=END;
-  console.log("chiuhua choco y se lastimo");
-   
-  }
+ 
   
-  spawnObstacles();
+ 
   drawSprites();
 
 }
