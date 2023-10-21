@@ -91,7 +91,7 @@ function spawnObstacles() {
 
       default: break;
 
-    }//
+   // }
     obstacle.depth = chihuahua.depth;
     chihuahua.depth = chihuahua.depth+1;
     //añade cada obstaculo al grupo
