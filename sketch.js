@@ -47,9 +47,9 @@ function draw() {
   background("#80d2e0");
   // mostrar la puntuacion
   text("puntuacion"+score,500,50);
-  score=score+Math.round(frameCount/60);
+  
   if (gameState==PLAY){
-
+    score=score+Math.round(frameCount/60);
     ground.velocityX = -2;
 
     if (ground.x < 0) {
