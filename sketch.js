@@ -72,7 +72,7 @@ function draw() {
   }
   else if(gameState==END){
     // se detiene el suelo 
-   // console.log("el piso se detuvo ")
+   
     ground.velocityX = 0;
 
   }
