@@ -75,7 +75,7 @@ function spawnObstacles() {
 
     var obstacle = createSprite(50, 160, 20, 50);
     obstacle.velocityX = -2 ;
-    obstacle.scale = 0.1;
+    obstacle.scale = 0.08;
     obstacle.lifetime = 210;
     
     var rand = Math.round(random(1, 3));
