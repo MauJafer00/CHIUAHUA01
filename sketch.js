@@ -62,7 +62,7 @@ function draw() {
   chihuahua.collide(invisibleGround);
   if(obstaclesGroup.isTouching(chihuahua)){
    gameState=END;
-  console.log("chiuhua choco");
+  console.log("chiuhua choco y se lastimo");
    
   }
   
