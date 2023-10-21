@@ -47,7 +47,7 @@ function draw() {
   background("#80d2e0");
   // mostrar la puntuacion
   text("puntuacion"+score,500,50);
-  
+  console.log(gameState)
   if (gameState==PLAY){
     score=score+Math.round(frameCount/60);
     ground.velocityX = -2;
@@ -72,7 +72,7 @@ function draw() {
   }
   else if(gameState==END){
     // se detiene el suelo 
-    console.log("el piso se detuvo ")
+   // console.log("el piso se detuvo ")
     ground.velocityX = 0;
 
   }
