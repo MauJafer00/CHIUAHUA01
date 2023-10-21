@@ -70,7 +70,7 @@ function draw() {
      }
      spawnObstacles();
   }
-  else if(gameState==END){
+  else if(gameState===END){
     // se detiene el suelo 
    
     ground.velocityX = 0;
