@@ -60,10 +60,11 @@ function draw() {
   }
   chihuahua.velocityY = chihuahua.velocityY + 0.5;
   chihuahua.collide(invisibleGround);
-  //if(obstaclesGroup.isTouching(chihuahua)){
+  if(obstaclesGroup.isTouching(chihuahua)){
+   gameState=END;
+  console.log("chiuhua choco");
    
-   
-  //}
+  }
   
   spawnObstacles();
   drawSprites();
@@ -71,7 +72,7 @@ function draw() {
 }
 function spawnObstacles() {
            
-  //if (frameCount % 60 === 0) {
+  if (frameCount % 60 === 0) {
 
     var obstacle = createSprite(50, 160, 20, 50);
     obstacle.velocityX = -2 ;
@@ -91,7 +92,7 @@ function spawnObstacles() {
 
       default: break;
 
-   // }
+    }
     obstacle.depth = chihuahua.depth;
     chihuahua.depth = chihuahua.depth+1;
     //añade cada obstaculo al grupo
