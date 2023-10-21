@@ -50,7 +50,7 @@ function draw() {
   console.log(ground.width);
   if (ground.x < 0) {
     
-    ground.x = ground.width / 5;
+    ground.x = ground.width / 2;
 
   }
   if (keyDown("space")) {
