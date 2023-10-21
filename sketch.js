@@ -34,7 +34,7 @@ function setup() {
 
   chihuahua = createSprite(50, 160, 20, 50);
   chihuahua.setCollider('circle',0,0,350)
-  chihuahua.debug = true;
+ // chihuahua.debug = true;
   chihuahua.scale = 0.1;
   chihuahua.addAnimation("running", chihuahua_running);
 
@@ -45,6 +45,9 @@ function setup() {
 function draw() {
   // console.log(frameCount);
   background("#80d2e0");
+  // mostrar la puntuacion
+  text("puntuacion"+score,500,50);
+  score=score+Math.round(frameCount/60);
   if (gameState==PLAY){
 
     ground.velocityX = -2;
@@ -62,13 +65,14 @@ function draw() {
     chihuahua.velocityY = chihuahua.velocityY + 0.5;
     if(obstaclesGroup.isTouching(chihuahua)){
       gameState=END;
-     console.log("chiuhua choco y se lastimo");
+     //console.log("chiuhua choco y se lastimo");
       
      }
      spawnObstacles();
   }
   else if(gameState==END){
-
+    // se detiene el suelo 
+    console.log("el piso se detuvo ")
     ground.velocityX = 0;
 
   }
