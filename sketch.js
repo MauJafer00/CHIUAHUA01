@@ -1,7 +1,7 @@
 var PLAY = 1;
 var END  = 0;
 var gameState = PLAY;
-
+var score = 0;
 var chihuahua;
 var chihuahua_running;
 var ground;
@@ -43,7 +43,7 @@ function setup() {
 }
   
 function draw() {
-  
+  console.log(frameCount);
   background("#80d2e0");
   
   ground.velocityX = -2;
