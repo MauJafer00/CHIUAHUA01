@@ -65,7 +65,7 @@ function draw() {
     chihuahua.velocityY = chihuahua.velocityY + 0.5;
     if(obstaclesGroup.isTouching(chihuahua)){
       gameState=END;
-     //console.log("chiuhua choco y se lastimo");
+     console.log("game estate ",gameState);
       score=0;
      }
      spawnObstacles();
